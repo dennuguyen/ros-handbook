@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.5">
+  <world name="default">
+    <!-- Literally a ground which stops objects from falling forever. -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <name>mandarin</name>
+      <uri>model://mandarin</uri>
+      <pose>0 0.1 0.1 0 0 0</pose>
+    </include>
+  </world>
+</sdf>

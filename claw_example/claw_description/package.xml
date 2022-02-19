@@ -1,0 +1,23 @@
+<package format="2">
+  <name>claw_description</name>
+  <version>1.0.0</version>
+  <description>UCRG Team 1 mandarin claw for challenge 1.</description>
+
+  <maintainer email="dennuguyen@gmail.com" />
+  
+  <author email="dennuguyen@gmail.com">Dan Nguyen</author>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <depend>roslaunch</depend>
+  <depend>joint_state_publisher</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>rviz</depend>
+
+  <exec_depend>roboticsgroup_gazebo_plugins</exec_depend>
+
+  <export>
+    <architecture_independent />
+  </export>
+</package>
