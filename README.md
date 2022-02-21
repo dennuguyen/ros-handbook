@@ -8,6 +8,11 @@
 - Know conventional structure for a control package.
 - Know conventional structure for a description package.
 - Know conventional structure for a gazebo package.
+- Know conventional structure for a teleop package.
+- Know conventional structure for a navigation package.
+- Know conventional structure for a slam package.
+- Know conventional structure for a manipulation package.
+- Know conventional structure for a kinematics package.
 - Know conventional structure for a serial package.
 - Understand how to manage packages.
 - Understand how to use git for version controlling of packages.
