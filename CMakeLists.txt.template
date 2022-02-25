@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 2.8.3)
+
+project(PROJECT_NAME)
+
+# Find packages that are required for building the package.
+find_package(catkin REQUIRED)
+
+# Generate pkg-config and CMake files.
+catkin_package()
+
+# Find packages that are required for running the package.
+find_package(roslaunch)
+
+# Find more CMakeLists.txt in subfolders.
+foreach(dir FOLDER1 FOLDER 2 FOLDER3 FOLDER4)
+	install(DIRECTORY ${dir}/
+		DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
+endforeach(dir)

@@ -29,8 +29,8 @@ source devel/setup.bash  # Brings the packages/nodes into user namespace.
 ```
 
 All packages have a `package.xml` and `CMakeLists.txt` file:
-- The [package.xml](http://wiki.ros.org/catkin/package.xml) file specifies dependencies and customise the package. Read the following [package.xml template]() to understand how it is written.
-- The [CMakeLists.txt](http://wiki.ros.org/catkin/CMakeLists.txt) file is the input to the CMake build system which specifies build instructions and install location. Read the following [CMakeLists.txt template]() to understand how it is written.
+- The [package.xml](http://wiki.ros.org/catkin/package.xml) file specifies dependencies and customise the package. Read the following [package.xml template](./package.xml.template) to understand how it is written.
+- The [CMakeLists.txt](http://wiki.ros.org/catkin/CMakeLists.txt) file is the input to the CMake build system which specifies build instructions and install location. Read the following [CMakeLists.txt template](./CMakeLists.txt.template) to understand how it is written.
 
 
 ## Control Package

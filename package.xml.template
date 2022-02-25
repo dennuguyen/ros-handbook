@@ -1,0 +1,16 @@
+<package format="2">
+  <!-- Mandatory project info. -->
+  <name>ROBOT_NAME</name>
+  <version>1.0.0</version>
+  <description></description>
+  <license>BSD</license>
+
+  <!-- Mandatory author info. -->
+  <maintainer email="someone@email.com" />
+  <author email="someone@email.com">SOMEONE</author>
+
+  <!-- Find packages/tools that this package depends on. -->
+  <buildtool_depend></buildtool_depend>
+  <depend></depend>
+  <exec_depend></exec_depend>
+</package>
