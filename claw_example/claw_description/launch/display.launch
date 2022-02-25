@@ -1,14 +1,24 @@
+<!-- 
+  This launch file is used to display the robot_description in RViz.
+
+ -->
+
 <launch>
+  <!-- gui is a launch file argument with default value false. gui loads a window to control the robot_description. -->
   <arg name="gui" default="false" />
-  <param name="robot_description" command="$(find xacro)/xacro $(find claw_description)/urdf/claw.xacro" />
+
+  <!-- Load use_gui parameter into the param server with value gui. -->
   <param name="use_gui" value="$(arg gui)" />
 
-  <!-- Send fake joint values. -->
+  <!-- Include description.launch.xml to load the robot_description onto the param server. -->
+  <include file="$(find claw_description)/launch/description.launch.xml" />
+
+  <!-- Reads robot_description, finds all non-fixed joints and publishes JointState message of joints. -->
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
 
-  <!-- Combine joint values -->
+  <!-- Uses URDF specified by robot_description and joint positions from joint_states to calculate forward kinematics and publish results via tf. -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
 
-  <!-- Show in Rviz   -->
+  <!-- Opens up RViz using our custom settings. We recommend using this since our custom settings will display the robot_description in RViz. -->
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find claw_description)/rviz/claw.rviz" required="true" />
 </launch>
