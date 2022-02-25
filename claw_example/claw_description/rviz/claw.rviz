@@ -36,7 +36,7 @@ Toolbars:
 Visualization Manager:
   Class: ""
 
-  # This section needs to be modified to show the transform frames of our robot.
+  # This section is what shows off our robot.
   Displays:
     - Alpha: 0.5
       Cell Size: 1
