@@ -1,4 +1,6 @@
+<!-- Specifies dependencies and package configuration. -->
 <package format="2">
+  <!-- Name of project, make sure it is the same in CMakeLists.txt -->
   <name>claw_description</name>
   <version>1.0.0</version>
   <description>UCRG Team 1 mandarin claw for challenge 1.</description>
@@ -8,16 +10,21 @@
   <author email="dennuguyen@gmail.com">Dan Nguyen</author>
   <license>BSD</license>
 
+  <!-- Find build tools that are required. -->
   <buildtool_depend>catkin</buildtool_depend>
   
+  <!-- Find packages that are required. -->
   <depend>roslaunch</depend>
   <depend>joint_state_publisher</depend>
   <depend>robot_state_publisher</depend>
   <depend>rviz</depend>
 
+  <!-- Find packages that are required at run-time. -->
   <exec_depend>roboticsgroup_gazebo_plugins</exec_depend>
 
+  <!-- Define a meta-package. -->
   <export>
+    <!-- Tag to not produce architecture-specific files which optimises packaging. Can use it for packages that do not have C/C++ code. -->
     <architecture_independent />
   </export>
 </package>
