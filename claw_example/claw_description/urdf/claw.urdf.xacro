@@ -1,13 +1,13 @@
+<?xml version="1.0" ?>
 <!-- 
   urdf.xacro file extension indicates that this urdf file should not be directly used but included in another urdf file.
 
   You will notice that this file isn't directly used anywhere within claw_example except claw.xacro. This file will make more sense when we want to combine it with another robot model.
 
+
   This file contains the "description" i.e. links, joints, actuators, etc of our robot.
 
  -->
-
-<?xml version="1.0" ?>
 
 <!-- The name of the robot is given here. xmlns:xacro is mandatory for xacro files. -->
 <robot name="claw" xmlns:xacro="http://ros.org/wiki/xacro">

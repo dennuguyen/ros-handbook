@@ -1,5 +1,6 @@
-<!-- The purpose of this file is to fix the claw to some abstract link so the claw can be used in the world. -->
 <?xml version="1.0" ?>
+<!-- The purpose of this file is to fix the claw to some abstract link so the claw can be used in the world. -->
+
 <robot name="claw" xmlns:xacro="http://ros.org/wiki/xacro">
   <!-- Including the claw.urdf.xacro file to give scope to xacro:claw. Inclusion is a simple copy-and-paste of code. -->
   <xacro:include filename="$(find claw_description)/urdf/claw.urdf.xacro" />

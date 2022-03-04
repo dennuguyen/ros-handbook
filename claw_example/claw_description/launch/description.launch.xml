@@ -1,10 +1,9 @@
+<?xml version="1.0"?>
 <!-- 
   launch.xml file extension indicates that this launch file should not be directly used but included in another launch file.
 
   This launch file serves the robot_description to the param server and having a launch.xml extension ensures that multiple robot_descriptions are NOT loaded in the param server.
  -->
-
-<?xml version="1.0"?>
 <launch>
   <!-- Load claw.xacro as the robot_description onto the param server. -->
   <param name="robot_description" command="$(find xacro)/xacro '$(find claw_description)/urdf/claw.xacro'"/>
