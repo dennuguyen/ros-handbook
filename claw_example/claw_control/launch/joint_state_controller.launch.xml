@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- 
+  launch.xml file extension indicates that this launch file should not be directly used but included in another launch file.
+
+  This launch file is used to load the joint state controller onto the param server.
+
+ -->
+
+<launch>
+  <rosparam file="$(find claw_control)/config/joint_state_controller.yaml" command="load"/> 
+  <node name="joint_state_controller_spawner" pkg="controller_manager" type="spawner" args="joint_state_controller" />
+</launch>

@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<launch>
-  <rosparam file="$(find claw_control)/config/claw_controller.yaml" command="load"/> 
-  <node name="claw_controller_spawner" pkg="controller_manager" type="spawner" args="claw" />
-</launch>

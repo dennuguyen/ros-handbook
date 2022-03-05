@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!-- 
+  This launch file is used to enable control of the robot.
+
+ -->
+
+<launch>
+
+  <!-- Uses URDF specified by robot_description and joint positions from joint_states to calculate forward kinematics and publish results via tf. -->
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="50.0" />
+    <param name="tf_prefix" type="string" value="" />
+  </node>
+
+  <!-- Fake Calibration -->
+  <node pkg="rostopic" type="rostopic" name="fake_joint_calibration" args="pub /calibrated std_msgs/Bool true" />
+  
+  <!-- Load claw joint state controller. -->
+  <include file="$(find claw_control)/launch/joint_state_controller.launch.xml" />
+
+  <!-- Load claw effort controller. -->
+  <include file="$(find claw_control)/launch/effort_controller.launch.xml" />
+
+</launch>

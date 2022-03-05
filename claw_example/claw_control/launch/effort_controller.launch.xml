@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- 
+  launch.xml file extension indicates that this launch file should not be directly used but included in another launch file.
+
+  This launch file is used to load the effort controller onto the param server.
+
+ -->
+
+<launch>
+  <rosparam file="$(find claw_control)/config/effort_controller.yaml" command="load"/> 
+  <node name="claw_effort_controller_spawner" pkg="controller_manager" type="spawner" args="claw" />
+</launch>
